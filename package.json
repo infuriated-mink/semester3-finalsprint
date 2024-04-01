@@ -1,0 +1,23 @@
+{
+  "name": "semester3-finalsprint",
+  "version": "1.0.0",
+  "description": "Full Stack Databases Project with PostgreSQL and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infuriated-mink/semester3-finalsprint.git"
+  },
+  "author": "Vanessa Rice, Evan Harte, Ethan Miller and Dillon Regular",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infuriated-mink/semester3-finalsprint/issues"
+  },
+  "homepage": "https://github.com/infuriated-mink/semester3-finalsprint#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
