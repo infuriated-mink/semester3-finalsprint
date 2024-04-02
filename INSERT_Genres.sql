@@ -1,0 +1,10 @@
+insert into public."Genres" (genreid, genrename) values (14, 'nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in');
+insert into public."Genres" (genreid, genrename) values (75, 'quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar');
+insert into public."Genres" (genreid, genrename) values (50, 'nulla nunc purus phasellus in felis donec semper sapien a libero');
+insert into public."Genres" (genreid, genrename) values (43, 'vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna');
+insert into public."Genres" (genreid, genrename) values (11, 'nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo');
+insert into public."Genres" (genreid, genrename) values (16, 'rhoncus sed vestibulum sit amet cursus id turpis integer aliquet');
+insert into public."Genres" (genreid, genrename) values (30, 'eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci');
+insert into public."Genres" (genreid, genrename) values (33, 'interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia');
+insert into public."Genres" (genreid, genrename) values (77, 'sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl');
+insert into public."Genres" (genreid, genrename) values (15, 'mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo');
