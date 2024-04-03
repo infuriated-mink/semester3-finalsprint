@@ -1,0 +1,22 @@
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (47, 'Star Warrior', 'A game where a warrior can ride stars.', '9/21/2023', 21, 'Front of store.', 5);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (32, 'Giant Man', 'A game about a man who can grow into a giant.', '10/18/2021', 28, 'Front of store.', 26);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (33, 'Star Warrior', 'A game where a warrior can ride stars.', '11/7/2023', 50, 'Back of store.', 18);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (11, 'Star Warrior', 'A game where a warrior can ride stars.', '11/3/2023', 90, 'In storage.', 20);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (31, 'Giant Man', 'A game about a man who can grow into a giant.', '2/11/2022', 86, 'In storage.', 62);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (34, 'Snowman', 'A game where a snowman is up against the world.', '8/12/2020', 52, 'In storage.', 83);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (7, 'Snowman', 'A game where a snowman is up against the world.', '10/20/2023', 100, 'Back of store.', 2);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (41, 'Giant Man', 'A game about a man who can grow into a giant.', '11/22/2023', 38, 'Front of store.', 79);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (89, 'Snowman', 'A game where a snowman is up against the world.', '1/11/2022', 7, 'In storage.', 87);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (17, 'Giant Man', 'A game about a man who can grow into a giant.', '6/12/2021', 18, 'Front of store.', 85);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (66, 'Giant Man', 'A game about a man who can grow into a giant.', '10/4/2020', 84, 'Front of store.', 54);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (73, 'Snowman', 'A game where a snowman is up against the world.', '5/13/2021', 98, 'Front of store.', 80);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (24, 'Star Warrior', 'A game where a warrior can ride stars.', '12/23/2022', 53, 'In storage.', 23);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (25, 'Giant Man', 'A game about a man who can grow into a giant.', '10/13/2021', 11, 'Front of store.', 91);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (5, 'Snowman', 'A game where a snowman is up against the world.', '3/7/2023', 89, 'Front of store.', 9);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (77, 'Star Warrior', 'A game where a warrior can ride stars.', '5/28/2023', 85, 'Front of store.', 56);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (10, 'Star Warrior', 'A game where a warrior can ride stars.', '10/1/2022', 78, 'In storage.', 72);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (21, 'Snowman', 'A game where a snowman is up against the world.', '8/14/2020', 59, 'In storage.', 48);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (36, 'Snowman', 'A game where a snowman is up against the world.', '1/27/2024', 75, 'In storage.', 84);
+insert into public."Games" (gameid, gametitle, description, releasedate, price, instorelocation, difficultyid) values (52, 'Giant Man', 'A game about a man who can grow into a giant.', '1/28/2023', 62, 'Back of store.', 100);
+
+

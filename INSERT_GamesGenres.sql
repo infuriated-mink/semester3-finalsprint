@@ -1,0 +1,10 @@
+insert into public."GamesGenres" (genreid, gameid) values (14, 41);
+insert into public."GamesGenres" (genreid, gameid) values (75, 40);
+insert into public."GamesGenres" (genreid, gameid) values (50, 75);
+insert into public."GamesGenres" (genreid, gameid) values (43, 70);
+insert into public."GamesGenres" (genreid, gameid) values (11, 35);
+insert into public."GamesGenres" (genreid, gameid) values (16, 2);
+insert into public."GamesGenres" (genreid, gameid) values (30, 46);
+insert into public."GamesGenres" (genreid, gameid) values (33, 4);
+insert into public."GamesGenres" (genreid, gameid) values (77, 38);
+insert into public."GamesGenres" (genreid, gameid) values (15, 94);
