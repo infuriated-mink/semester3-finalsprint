@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+  </head>
+  <body>
+    <h1>Virtual Vault Game Search</h1>
+    <button>
+      <a href="/search">Search Again</a>
+    </button>
+    <% results.forEach(function(result, index) { %>
+    <p>
+      <%= index + 1 %>: <b>"<%= result.gametitle + '": ' %></b>
+      <%= result.description %> (<%= result.instorelocation %> $<%= result.price
+      %>).
+    </p>
+    <% }); %>
+  </body>
+</html>
