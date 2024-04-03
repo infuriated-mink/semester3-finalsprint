@@ -5,5 +5,6 @@ CREATE TABLE public."Games" (
     releaseDate DATE,
     price DECIMAL(10, 2),
     difficultyID INT,
+    instoreLocation TEXT,
     FOREIGN KEY (difficultyID) REFERENCES public."Difficulty"(difficultyID)
 );

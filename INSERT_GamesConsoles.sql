@@ -1,4 +1,4 @@
-INSERT INTO public."GamesConsoles" (gameconsoleid, gameid, consoleid) VALUES
+INSERT INTO public."GamesConsoles" (gamesconsoleid, gameid, consoleid) VALUES
 (1, 1, 1),
 (2, 2, 2),
 (3, 3, 3),

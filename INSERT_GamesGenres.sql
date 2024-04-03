@@ -68,6 +68,6 @@ INSERT INTO public."GamesGenres" (genreid, gameid) VALUES
 (7, 67),  
 (8, 68),  
 (9, 69),  
-(10, 70); 
-(1,71);
+(10, 70), 
+(1, 71),
 (2,72)
