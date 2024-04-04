@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+  </head>
+  <body>
+    <h1>Virtual Vault Customer Search</h1>
+    <button>
+      <a href="/search/customers">Search Again</a>
+    </button>
+    <% results.forEach(function(result) { %>
+    <p>
+      Name: <%= result.firstName %> <%= result.lastName %>
+      <br />
+      Email: <%= result.email %>
+      <br />
+      Phone: <%= result.phonenumber %>
+      <br />
+      <hr />
+    </p>
+    <% }); %>
+  </body>
+</html>

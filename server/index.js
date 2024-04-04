@@ -13,9 +13,13 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-// anything beginning with "/search" will go into this
+// "/search"
 const searchRouter = require("./routes/search");
 app.use("/search", searchRouter);
+
+// "search/customers"
+const customersRouter = require("./routes/search");
+app.use("/search/customers", customersRouter);
 
 app.use((req, res) => {
   res.status(404).render("404");
