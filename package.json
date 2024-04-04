@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/infuriated-mink/semester3-finalsprint#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
     "express": "^4.19.2"
   }
 }

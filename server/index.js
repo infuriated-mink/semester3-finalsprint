@@ -3,12 +3,17 @@ const methodOverride = require("method-override");
 const app = express();
 const PORT = 3000;
 
+// Set up the app
 global.DEBUG = true;
 app.set("view engine", "ejs");
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: false })); // This is important!
-app.use(methodOverride("_method")); // So is this!
 
+// Middleware
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride("_method"))
+
+// Routes
+// "/"
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
@@ -21,6 +26,7 @@ app.use("/search", searchRouter);
 const customersRouter = require("./routes/search");
 app.use("/search/customers", customersRouter);
 
+// "error 404"
 app.use((req, res) => {
   res.status(404).render("404");
 });

@@ -1,8 +1,8 @@
 const { MongoClient } = require("mongodb");
+require("dotenv").config();
 
-// const uri = "mongodb://127.0.0.1:27017/";
-const atlas =
-  "mongodb+srv://evanharte:Kh8E5b8PIvm4AVh6@cluster0.jkzu0ey.mongodb.net/";
+// const uri = process.env.MONGO_URI;
+const atlas = "mongodb+srv://Vanessa:Keyin2021@semester3-sprint.taafami.mongodb.net/";
 
 // const pool = new MongoClient(uri);
 const pool = new MongoClient(atlas);
