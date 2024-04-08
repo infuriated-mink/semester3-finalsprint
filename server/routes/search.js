@@ -26,28 +26,47 @@ router.get("/customers", async (req, res) => {
 });
 
 // Route to handle game search request
+// router.post("/results", async (req, res) => {
+//   // search text must equal the value of the input field in search.ejs
+//   const searchTextGame = req.body.searchTextGame;
+//   const searchTextCustomer = req.body.searchTextCustomer;
+//   if (req.url === "/search/results") {
+//     try {
+//       const results = await getFullTextPG(searchTextGame);
+//       res.render("results", { results });
+//     } catch (error) {
+//       console.error("Error:", error);
+//       res.status(500).send("Internal Server Error");
+//     }
+//   } else if (req.path === "http://localhost:3000/search/customers") {
+//     try {
+//       const results = await getFullTextM(searchTextCustomer);
+//       res.render("custResults", { results });
+//     } catch (error) {
+//       console.error("Error:", error);
+//       res.status(500).send("Internal Server Error");
+//     }
+//   }
+// });
+
+////////////////////////
+
+// Route to handle both game and customer search requests
 router.post("/results", async (req, res) => {
-  // search text must equal the value of the input field in search.ejs
   const searchTextGame = req.body.searchTextGame;
   const searchTextCustomer = req.body.searchTextCustomer;
-  if (req.body.searchTextGame) {
-    try {
-      const results = await getFullTextPG(searchTextGame);
-      res.render("results", { results });
-    } catch (error) {
-      console.error("Error:", error);
-      res.status(500).send("Internal Server Error");
-    }
-  } else if (req.body.searchTextCustomer) {
-    try {
-      const results = await getFullTextM(searchTextCustomer);
-      res.render("custResults", { results });
-    } catch (error) {
-      console.error("Error:", error);
-      res.status(500).send("Internal Server Error");
-    }
-  }
+
+  let gameResults = [];
+  let customerResults = [];
+
+  gameResults = await getFullTextPG(searchTextGame);
+  res.render("results", { gameResults });
+
+  customerResults = await getFullTextM(searchTextCustomer);
+  res.render("custResults", { customerResults });
 });
+
+////////////////////////
 
 // Route to handle customer search request
 // router.post("/customer/results", async (req, res) => {
