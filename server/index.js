@@ -9,6 +9,13 @@ const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
+const PORT = 3000;
+
+app.use(express.urlencoded({ extended: false }));
+// Define the route
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 
 const initializePassport = require("./passport-config");
 initializePassport(
@@ -90,16 +97,18 @@ function checkNotAuthenticated(req, res, next) {
   next();
 }
 
-app.listen(3000);
-
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
 // const express = require('express');
 // const app = express();
 // const PORT = 3000;
 
 // app.use(express.urlencoded({ extended: false }));
 // // Define the route
-// app.get('/', (req, res) => {
-//   res.send('Hello, World!');
+// app.get("/", (req, res) => {
+//   res.send("Hello, World!");
 // });
 
 // app.get('/register', (req, res) => {
@@ -118,7 +127,7 @@ app.listen(3000);
 //   req.body.email
 // });
 
-// // Start the server
+// Start the server
 // app.listen(PORT, () => {
 //   console.log(`Server is running on http://localhost:${PORT}`);
 // });
