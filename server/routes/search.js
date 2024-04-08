@@ -38,7 +38,7 @@ router.post("/results", async (req, res) => {
       console.error("Error:", error);
       res.status(500).send("Internal Server Error");
     }
-  } else {
+  } else if (req.body.searchTextCustomer) {
     try {
       const results = await getFullTextM(searchTextCustomer);
       res.render("custResults", { results });
@@ -50,7 +50,7 @@ router.post("/results", async (req, res) => {
 });
 
 // Route to handle customer search request
-// router.post("/results", async (req, res) => {
+// router.post("/customer/results", async (req, res) => {
 //   const searchText = req.body.searchText;
 //   try {
 //     const results = await getFullTextM(searchText);
