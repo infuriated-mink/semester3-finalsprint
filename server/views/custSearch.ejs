@@ -9,11 +9,11 @@
     <h1>Virtual Vault Customer Search</h1>
     <%- include('./partials/nav.ejs') %>
     <br />
-    <form id="searchForm" action="/search/customers/results" method="post">
+    <form id="searchForm" action="/search/results" method="post">
       <input
         type="text"
-        id="searchInput"
-        name="searchText"
+        id="custSearchInput"
+        name="searchTextCustomer"
         placeholder="Enter keywords"
         required
       />

@@ -7,7 +7,7 @@ const { getFullTextM } = require("../services/m.fulltext.dal.js");
 router.get("/", async (req, res) => {
   try {
     // Pass an empty array as results for the initial GET request
-    res.render("search");
+    res.render("search", { type: "GAME" });
   } catch (error) {
     console.error("Error:", error);
     res.status(500).send("Internal Server Error");
@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
 router.get("/customers", async (req, res) => {
   try {
     // Pass an empty array as results for the initial GET request
-    res.render("custSearch");
+    res.render("search", { type: "CUSTOMER" });
   } catch (error) {
     console.error("Error:", error);
     res.status(500).send("Internal Server Error");
@@ -28,26 +28,37 @@ router.get("/customers", async (req, res) => {
 // Route to handle game search request
 router.post("/results", async (req, res) => {
   // search text must equal the value of the input field in search.ejs
-  const searchText = req.body.searchText;
-  try {
-    const results = await getFullTextPG(searchText);
-    res.render("results", { results });
-  } catch (error) {
-    console.error("Error:", error);
-    res.status(500).send("Internal Server Error");
+  const searchTextGame = req.body.searchTextGame;
+  const searchTextCustomer = req.body.searchTextCustomer;
+  if (req.body.searchTextGame) {
+    try {
+      const results = await getFullTextPG(searchTextGame);
+      res.render("results", { results });
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  } else {
+    try {
+      const results = await getFullTextM(searchTextCustomer);
+      res.render("custResults", { results });
+    } catch (error) {
+      console.error("Error:", error);
+      res.status(500).send("Internal Server Error");
+    }
   }
 });
 
 // Route to handle customer search request
-router.post("/customers/results", async (req, res) => {
-  const searchText = req.body.searchText;
-  try {
-    const results = await getFullTextM(searchText);
-    res.render("custResults", { results });
-  } catch (error) {
-    console.error("Error:", error);
-    res.status(500).send("Internal Server Error");
-  }
-});
+// router.post("/results", async (req, res) => {
+//   const searchText = req.body.searchText;
+//   try {
+//     const results = await getFullTextM(searchText);
+//     res.render("custResults", { results });
+//   } catch (error) {
+//     console.error("Error:", error);
+//     res.status(500).send("Internal Server Error");
+//   }
+// });
 
 module.exports = router;
