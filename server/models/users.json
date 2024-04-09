@@ -1,1 +1,17 @@
-[{"id":"1712584178535","email":"dillon.regular@keyin.com","password":"$2b$10$RV71VLVUKg74rP4/SQ8AqOYAECJRFv66Cgjb.5OqCKGezi1gWSlK."},{"id":"1712668365431","email":"billybob@gmail.com","password":"$2b$10$jkTfHn8LbEIRDQCHk2ydCud2DvU3N3Ob1WiKE3pDfckKQbI2RfaY6"}]
+[
+  {
+    "id": "1712584178535",
+    "email": "dillon.regular@keyin.com",
+    "password": "$2b$10$RV71VLVUKg74rP4/SQ8AqOYAECJRFv66Cgjb.5OqCKGezi1gWSlK."
+  },
+  {
+    "id": "1712668365431",
+    "email": "billybob@gmail.com",
+    "password": "$2b$10$jkTfHn8LbEIRDQCHk2ydCud2DvU3N3Ob1WiKE3pDfckKQbI2RfaY6"
+  },
+  {
+    "id": "1712669979411",
+    "email": "georgeofthejungle@gmail.com",
+    "password": "$2b$10$TMnhagsO4Not4A/s8FCvE.AbVpaSz3ABpkMgzm2rw8Ah/jX3d6IRW"
+  }
+]
