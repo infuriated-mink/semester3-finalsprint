@@ -5,15 +5,15 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const fs = require("fs");
+const initializePassport = require('./passport-config');
+initializePassport(passport, getUserByEmail, getUserById);
 
 const app = express();
 const PORT = 3000;
-global.DEBUG = true;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -34,45 +34,34 @@ fs.readFile("./models/users.json", (err, data) => {
   users = JSON.parse(data);
 });
 
-function saveUsers() {
-  fs.writeFile("./models/users.json", JSON.stringify(users, null, 2), err => {
-    if (err) throw err;
-  });
+function getUserByEmail(email) {
+  return users.find(user => user.email === email);
 }
 
-passport.use(new LocalStrategy({ usernameField: "email" }, async (email, password, done) => {
-  const user = users.find(user => user.email === email);
-  if (!user) {
-    return done(null, false, { message: "No user with that email" });
-  }
+function getUserById(id) {
+  return users.find(user => user.id === id);
+}
 
-  try {
-    if (await bcrypt.compare(password, user.password)) {
-      return done(null, user);
-    } else {
-      return done(null, false, { message: "Password incorrect" });
-    }
-  } catch (e) {
-    return done(e);
-  }
-}));
+initializePassport(passport, getUserByEmail, getUserById);
 
 passport.serializeUser((user, done) => done(null, user.id));
 passport.deserializeUser((id, done) => {
-  const user = users.find(user => user.id === id);
+  const user = getUserById(id);
   done(null, user);
 });
 
+// Middleware to check if the user is authenticated
 function checkAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect("/login");
+  res.redirect('/login');
 }
 
+// Middleware to check if the user is not authenticated
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
-    return res.redirect("/");
+    return res.redirect('/');
   }
   next();
 }
@@ -117,6 +106,13 @@ app.delete("/logout", (req, res) => {
     res.redirect("/login");
   });
 });
+
+// Function to save users to the JSON file
+function saveUsers() {
+  fs.writeFile("./models/users.json", JSON.stringify(users, null, 2), err => {
+    if (err) throw err;
+  });
+}
 
 // "/search" route setup
 const searchRouter = require("./routes/search");

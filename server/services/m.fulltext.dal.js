@@ -1,6 +1,6 @@
 const { ObjectId } = require("mongodb");
 const dal = require("./mdb");
-
+global.DEBUG = true;
 // Get full text search results
 async function getFullTextM(fulltext) {
   if (DEBUG) console.log("m.dal.getFullTextM()");
