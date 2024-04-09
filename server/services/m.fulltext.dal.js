@@ -7,7 +7,7 @@ async function getFullTextM(fulltext) {
   try {
     await dal.connect();
     const database = dal.db("Semester3-Sprint");
-    const collection = database.collection("Customers");
+    const collection = database.collection("customers");
     const result = await collection
       .find({ $text: { $search: fulltext } })
       .toArray();
