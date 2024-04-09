@@ -21,75 +21,17 @@ Virtual Vault is a comprehensive search and authentication system designed to pr
 
 ## Features
 
-    - Full-text search for games and customer data using PostgreSQL and MongoDB.
-    - User authentication with passport.js strategies, including JWT and local strategies.
-    - Secure password handling with bcrypt hashing.
-    - Session management with express-session.
-    - Environment variable management with dotenv for development purposes.
-    - Logging of search queries with timestamps.
-    - Unit testing with Jest.
+- Full-text search for games and customer data using PostgreSQL and MongoDB.
+- User authentication with passport.js strategies, including JWT and local strategies.
+- Secure password handling with bcrypt hashing.
+- Session management with express-session.
+- Environment variable management with dotenv for development purposes.
+- Logging of search queries with timestamps.
+- Unit testing with Jest.
 
 ## Project Structure
 
-Virtual Vault/
-│
-├── models/
-│ └── users.json # User data in JSON format
-│
-├── routes/
-│ ├── search.js # Express routes for search features
-│ ├── logging.js # Function to log search queries
-│ └── searchLog.txt # Document to store search log entries
-|
-├── services/
-│ ├── mdb.js # MongoDB client instance
-│ ├── pg.fulltext.dal.js # PostgreSQL data access layer for full-text search
-│ └── m.fulltext.dal.js # MongoDB data access layer for full-text search
-│  
-| └── DDL/
-| └── Mongo/
-| └── CustomerJSON.json # JSON file for MongoDB customer data.
-| └── PG Create/ Various SQL files for creating the PostgreSQL database schema, including tables for games, genres, inventory, etc.
-
-| ├── CREATE_DB_postgres.sql  
-| ├── CREATE_TABLE_Difficulty.sql
-| ├── CREATE_TABLE_Games.sql
-| ├── CREATE_TABLE_GamesConsoles.sql
-| ├── CREATE_TABLE_GamesGenres.sql
-| ├── CREATE_TABLE_Genres.sql
-| ├── CREATE_TABLE_Inventory.sql
-| └── CREATE_TABLE_Stores.sql
-| └── PG Insert/ # SQL files for inserting data into the PostgreSQL database tables.
-| ├── INSERT_Consoles.sql
-| ├── INSERT_Difficulty.sql
-| ├── INSERT_Games.sql
-| ├── INSERT_GamesConsoles.sql
-| ├── INSERT_GamesGenres.sql
-| ├── INSERT_Genres
-| ├── INSERT_Inventory.sql
-| └── INSERT_Stores.sql
-| └── tests/
-│ ├── index.test.js # Test file for the main application.
-│ ├── logging.test.js # Test file for the logging functionality.
-├── views/ # EJS templates for rendering the application's views.
-│ └── partials/
-| ├── foot.ejs  
-| ├── head.ejs  
-| └── nav.ejs  
-│ ├── 404.ejs
-│ ├── 503.ejs
-│ ├── custResults.ejs
-│ ├── custSearch.ejs
-│ ├── index.ejs
-│ ├── login.ejs
-│ ├── norecord.ejs
-│ ├── register.ejs
-│ ├── results.ejs
-│ └── search.ejs
-├── passport-config.js # Passport local strategy configuration  
-├── passport.js # Passport JWT strategy configuration  
-├── index.js # Main application file with Express setup
-└── .env # Environment variables (not tracked)
+![file-structure](file-structure.pdf)
 
 ## Installation
 
