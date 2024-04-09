@@ -10,10 +10,31 @@
     </button>
     <% results.forEach(function(result, index) { %>
     <p>
-      <%= index + 1 %>: <b>"<%= result.gametitle + '": ' %></b>
-      <%= result.description %> (<%= result.instorelocation %> $<%= result.price
-      %>).
+      <%= index + 1 %>: <b><%= result.gametitle %></b>
+      <ul>
+        <li>
+          Description: <%= result.description %>
+        </li>
+        <li> 
+          In-store location: <%= result.instorelocation %>
+        </li>
+        <li>
+          Price: $<%= result.price %>
+        </li>
+        <li>
+          Genre: <%= result.genrename %>
+        </li>
+        <li>
+          Platform: <%= result.consolename %>
+        </li>
+        <li>
+          QOH: <%= result.quantity %>
+        </li>
+
+      </ul>
+     
     </p>
+    <hr />
     <% }); %>
   </body>
 </html>
