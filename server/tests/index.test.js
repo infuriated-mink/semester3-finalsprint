@@ -1,6 +1,6 @@
-const { checkAuthenticated } = require('./index');
+const { checkAuthenticated } = require('../index');
 
-jest.mock('./index', () => ({
+jest.mock('../index', () => ({
     checkAuthenticated: jest.fn(() => true),
 }));
 
