@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virtual Vault Game Search</title>
+    <link rel="stylesheet" href="search.css">
   </head>
   <body>
-    <h1>Virtual Vault Game Search</h1>
-    <%- include('./partials/nav.ejs') %>
+    <div class="header">
+    <h1>Virtual Vault</h1>
+  </div>
+  <div class="navbar">
+  <%- include('./partials/nav.ejs') %>
+</div>
     <br />
+
+    <div class="content">
+      <h2 class="game-search-title">Game Search</h2>
     <form id="searchForm" action="/search/results" method="post">
       <input
         type="text"
         id="searchInput"
         name="searchText"
         placeholder="Enter keywords"
-        required
+        required class="search-input"
       />
-      <button type="submit">Search</button>
+      <button type="submit" class="search-button">Search</button>
     </form>
+  </div>
   </body>
 </html>
