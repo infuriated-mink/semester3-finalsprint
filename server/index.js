@@ -107,8 +107,39 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
   }
 });
 
+app.post("/login", function (req, res, next) {
+  passport.authenticate("local", function (err, user, info) {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      return res.redirect("/login");
+    }
+    req.logIn(user, function (err) {
+      if (err) {
+        return next(err);
+      }
+      return res.redirect("/models/users/" + user.username);
+    });
+  })(req, res, next);
+});
+
+// Logout route
+app.post("/logout", function (req, res, next) {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.redirect("/login");
+  });
+});
+
 app.delete("/logout", (req, res) => {
-  req.logOut(() => {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    // Render the loggedOut.ejs view after logging out
     res.redirect("/login");
   });
 });
