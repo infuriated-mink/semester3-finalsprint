@@ -1,7 +1,6 @@
 const fs = require('fs');
 const logSearch = require('../routes/logging');
 
-// Mock fs.appendFile
 jest.mock('fs', () => ({
   appendFile: jest.fn((path, data, callback) => callback(null))
 }));
