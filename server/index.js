@@ -134,3 +134,5 @@ if (process.env.NODE_ENV !== "test") {
     console.log(`Server is running on http://localhost:${PORT}`);
   });
 }
+
+module.exports = app;
