@@ -33,5 +33,15 @@
     "id": "1712763753383",
     "email": "billybob@gmail.com",
     "password": "$2b$10$Vu6zQAE/aHd12YWDO1xeIOcR9FzR9kxgS3X05DTy.90eZL/Sxdln."
+  },
+  {
+    "id": "1712843895395",
+    "email": "jjesso@test.com",
+    "password": "$2b$10$XfAZX0tZ.oLtgCVZGTVl2.7NFono69X29Yf.xrRuxwkd4ZKTL1MNW"
+  },
+  {
+    "id": "1712844075151",
+    "email": "jjoe@test.com",
+    "password": "$2b$10$A0r5Tbxt3ccQrv0qnKnIEesidDrsFZIT86rQaHG.uIqRApHRvOtp2"
   }
 ]
