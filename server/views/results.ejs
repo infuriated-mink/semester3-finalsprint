@@ -2,20 +2,22 @@
 <html>
   <head>
     <title>Search Results</title>
-    <link rel="stylesheet" href="../public/results.css">
+    <link rel="stylesheet" href="/css/results.css">
   </head>
   <body>
     <h1 class="header-class">Virtual Vault</h1>
     <%- include('./partials/nav.ejs') %>
+    <br>
     <div class="button-div">
       <button>
         <a href="/search">Search Again</a>
       </button>
     </div>
+    <br>
     <% results.forEach(function(result, index) { %>
-    <p>
+    <p class="results">
       <%= index + 1 %>: <b><%= result.gametitle %></b>
-      <ul>
+      <ul class="results">
         <li>
           Description: <%= result.description %>
         </li>

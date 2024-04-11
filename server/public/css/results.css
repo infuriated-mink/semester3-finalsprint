@@ -17,6 +17,7 @@ body {
   height: 210px;
   font-weight: 200;
   font-size: large;
+  margin: 0;
 }
 
 .nav-class {
@@ -36,4 +37,9 @@ body {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.results {
+  margin-left: 10px;
+  font-size: 10pt;
 }
