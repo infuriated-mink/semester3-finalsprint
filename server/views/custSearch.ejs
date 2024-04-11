@@ -1,30 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
     <title>Virtual Vault Customer Search</title>
-    <link rel="stylesheet" href="custSearch.css">
-  </head>
+    <link rel="stylesheet" href="/css/search.css">
   <body>
-    <div class="header">
-    <h1>Virtual Vault</h1>
-  </div>
-  <div class="navbar">
-    <%- include('./partials/nav.ejs') %>
-  </div>
     <br />
-
-    <h2 class="game-search-title">Game Search</h2>
-    <form id="searchForm" action="/search/customers/results" method="post">
-      <input
-        type="text"
-        id="searchInput"
-        name="searchText"
-        placeholder="Enter keywords"
-        required class="search-input"
-      />
-      <button type="submit" class="search-button">Search</button>
-    </form>
+    <div class="content">
+      <h2 class="customer-search-title">Customer Search</h2>
+      <form id="customerSearchForm" action="/search/customers/results" method="post">
+        <input
+          type="text"
+          id="customerSearchInput"
+          name="searchText"
+          placeholder="Enter keywords"
+          required class="search-input"
+        />
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </div>
   </body>
 </html>

@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
     <title>Virtual Vault Game Search</title>
-    <link rel="stylesheet" href="search.css">
-  </head>
+    <link rel="stylesheet" href="/css/search.css">
   <body>
-    <div class="header">
-    <h1>Virtual Vault</h1>
-  </div>
-  <div class="navbar">
-  <%- include('./partials/nav.ejs') %>
-</div>
     <br />
-
     <div class="content">
       <h2 class="game-search-title">Game Search</h2>
     <form id="searchForm" action="/search/results" method="post">
