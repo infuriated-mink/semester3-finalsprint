@@ -2,20 +2,29 @@
 <html>
   <head>
     <title>Search Results</title>
+    <link rel="stylesheet" href="/css/results.css">
   </head>
   <body>
-    <h1>Virtual Vault Customer Search</h1>
-    <button>
-      <a href="/search/customers">Search Again</a>
-    </button>
-    <% results.forEach(function(result) { %>
-    <p>
-      Name: <%= result.firstName %> <%= result.lastName %>
-      <br />
-      Email: <%= result.email %>
-      <br />
-      Phone: <%= result.phonenumber %>
-      <br />
+    <h1 class="header-class">Virtual Vault</h1>
+    <%- include('./partials/nav.ejs') %>
+    <br>
+    <div class="button-div">
+      <button>
+        <a href="/search/customers">Search Again</a>
+      </button>
+    </div>
+    <br>
+    <% results.forEach(function(result, index) { %>
+    <p class="results">
+      <b><%= index + 1 %>: Name: <%= result.firstName %> <%= result.lastName %></b>
+      <ul class="results">
+        <li>
+          Email: <%= result.email %>
+        </li>
+        <li>
+          Phone: <%= result.phonenumber %>
+        </li>
+      </ul>
       <hr />
     </p>
     <% }); %>
